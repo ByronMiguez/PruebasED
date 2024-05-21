@@ -1,12 +1,19 @@
-package tablaEnteros;
+ package tablaEnteros;
 
 import static org.junit.Assert.*;
+
+import org.junit.Before;
 import org.junit.Test;
 
 public class TablaEnterosTest {
     private Integer[] numeros = {1, 2, 3};
-    private TablaEnteros tablaenteros = new TablaEnteros(numeros);
-
+    private TablaEnteros tablaenteros;
+    
+    @Before
+    public void setUpBeforeClass()throws Exception {
+    	tablaenteros= new TablaEnteros(numeros);
+    }
+    
     @Test
     public void testSumaTabla() {
         int result = tablaenteros.sumaTabla();
