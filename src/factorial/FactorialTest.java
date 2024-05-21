@@ -3,21 +3,21 @@ package factorial;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-class FactorialTest {
+public class FactorialTest {
 
 	@Test (expected= IllegalArgumentException.class)
-	 void test1() {
+	 public void test1() {
 	    Factorial.calculo(-1);
 	}
 
 
 	@Test
-	 void test2() {
+	 public void test2() {
 		Factorial.calculo(1);
 	}
 	
 	@Test (expected= ArithmeticException.class)
-	 void test3() {
-		Factorial.calculo(949758489);
+	 public void test3() {
+		Factorial.calculo(94975);
 	}
 }
